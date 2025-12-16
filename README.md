@@ -15,7 +15,7 @@ A modern, multi-step crypto-to-fiat exchange interface built with **Next.js**, *
 
 ### 1. Clone the repository
 
-git clone https://github.com/couch-p0tato/novacrust-form.git
+git clone https://github.com/couch-p0tato/novacrust-assessment.git
 
 ### 2. Install Dependencies
 

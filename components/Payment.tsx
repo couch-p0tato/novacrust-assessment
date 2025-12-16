@@ -43,7 +43,7 @@ export default function Payment({ label, value, options, onChange, placeholder =
           </Button>
         </PopoverTrigger>
         
-        <PopoverContent className="p-0 test-border-1" align="center" style={{ width: 'var(--radix-popover-trigger-width)' }}>
+        <PopoverContent className="p-0" align="center" style={{ width: 'var(--radix-popover-trigger-width)' }}>
           <Command>
             <CommandList>
               <CommandGroup>
@@ -55,7 +55,7 @@ export default function Payment({ label, value, options, onChange, placeholder =
                       onChange(option.value)
                       setOpen(false)
                     }}
-                    className="cursor-pointer py-3 test-border"
+                    className="cursor-pointer py-3"
                   >
                     <Check
                       className={cn(
