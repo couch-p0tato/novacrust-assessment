@@ -30,6 +30,7 @@ export default function CurrencyInput({ label, amount, currency, options, onAmou
           className="border-none shadow-none font-bold p-0 focus-visible:ring-0 h-auto w-full placeholder:text-gray-300"
           placeholder="0.00"
           style={{ fontSize: '24px' }}
+          required
         />
 
         <Popover open={open} onOpenChange={setOpen}>

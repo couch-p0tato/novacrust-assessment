@@ -1,6 +1,6 @@
 "use client"
 
-import * as React from "react"
+import { useState } from "react"
 import { Check, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -11,7 +11,7 @@ import { PaymentProps } from "@/types"
 
 export default function Payment({ label, value, options, onChange, placeholder = "Select an option" }: PaymentProps) {
   
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = useState(false)
   
   const selectedOption = options.find((option) => option.value === value)
 

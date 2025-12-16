@@ -7,6 +7,8 @@ import CurrencyInput from "@/components/CurrencyInput"
 import { CurrencyOption } from "@/types"
 import { Wallet, Building2, Globe, CreditCard } from "lucide-react"
 import Payment from "@/components/Payment"
+import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
 
 const cryptoOptions: CurrencyOption[] = [
   { value: "eth", label: "ETH", icon: "⟠" },
@@ -126,9 +128,63 @@ export default function InitiateSwap({ onNext }: InitiateSwapProps) {
             </div>
           </TabsContent>
 
-          <TabsContent value="crypto">Change your password here.</TabsContent>
+          <TabsContent value="crypto" className="w-full mt-5 flex flex-col items-center">
+            <div className="space-y-4 w-[95%] md:w-[90%] xl:w-[90%] flex flex-col items-center text-center my-6">
+                {/* Look for Clash Display font later */}
+                <h2 className="text-[#013941] text-4xl font-medium">Coming Soon!</h2>
 
-          <TabsContent value="fiat">Change your password here.</TabsContent>
+                <p className="text-[#4F4F4F]">Cash to Crypto is almost here. <br /> Enter your email and we'll let you know the moment it's live</p>
+
+                <div className="space-y-2 w-full">
+                    <Label
+                        htmlFor="email"
+                        className="text-sm font-medium text-[#013941]"
+                    >
+                        Email
+                    </Label>
+                    <Input
+                        id="email"
+                        placeholder="Enter your email"
+                        className="w-full rounded-full text-[#013941] border-gray-200 bg-white px-4 py-5 text-base font-normal placeholder:text-gray-400 focus-visible:ring-0 focus-visible:border-[#013941] transition-colors shadow-none"
+                    />
+                </div>
+
+                <Button
+                    className="w-full rounded-full py-6 cursor-pointer bg-[#013941] hover:bg-[#012a2e] mt-8 xl:mb-12"
+                >
+                    Update me
+                </Button>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="fiat" className="w-full mt-5 flex flex-col items-center">
+            <div className="space-y-4 w-[95%] md:w-[90%] xl:w-[90%] flex flex-col items-center text-center my-6">
+                {/* Look for Clash Display font later */}
+                <h2 className="text-[#013941] text-4xl font-medium">Coming Soon!</h2>
+
+                <p className="text-[#4F4F4F]">Crypto to fiat loan is almost here. <br /> Enter your email and we'll let you know the moment it's live</p>
+
+                <div className="space-y-2 w-full">
+                    <Label
+                        htmlFor="email"
+                        className="text-sm font-medium text-[#013941]"
+                    >
+                        Email
+                    </Label>
+                    <Input
+                        id="email"
+                        placeholder="Enter your email"
+                        className="w-full rounded-full text-[#013941] border-gray-200 bg-white px-4 py-5 text-base font-normal placeholder:text-gray-400 focus-visible:ring-0 focus-visible:border-[#013941] transition-colors shadow-none"
+                    />
+                </div>
+
+                <Button
+                    className="w-full rounded-full py-6 cursor-pointer bg-[#013941] hover:bg-[#012a2e] mt-8 xl:mb-12"
+                >
+                    Update me
+                </Button>
+            </div>
+          </TabsContent>
         </Tabs>
       </div>
   );
