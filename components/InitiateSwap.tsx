@@ -9,11 +9,26 @@ import { Wallet, Building2, Globe, CreditCard } from "lucide-react"
 import Payment from "@/components/Payment"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
+import { TokenETH, TokenCELO, TokenTON, TokenBNB, WalletMetamask, WalletRainbow, WalletWalletConnect } from '@web3icons/react'
+import { CircleFlag } from 'react-circle-flags'
 
 const cryptoOptions: CurrencyOption[] = [
-  { value: "eth", label: "ETH", icon: "⟠" },
-  { value: "usdt", label: "USDT - CELO", icon: "₮" },
-  { value: "btc", label: "USDT - BNB", icon: "₿" },
+  { value: "eth", 
+    label: "ETH", 
+    icon: <div className="bg-white rounded-full w-fit p-1"><TokenETH variant="mono" size={64} color="#000000" /></div>
+  },
+  { value: "usdt", 
+    label: "USDT - CELO", 
+    icon: <div className="bg-[#FCFE52] rounded-full w-fit p-1"><TokenCELO variant="mono" size={40} color="#000000" /></div>
+  },
+  { value: "ton", 
+    label: "USDT - TON", 
+    icon: <div className="bg-[#08C] rounded-full w-fit p-1"><TokenTON variant="mono" size={68} color="#FFFFFF" /></div>
+  },
+  { value: "btc", 
+    label: "USDT - BNB", 
+    icon: <div className="bg-[#F0B90B] rounded-full w-fit p-1"><TokenBNB variant="mono" size={68} color="#FFFFFF" /></div>
+  },
 ]
 
 const fiatOptions: CurrencyOption[] = [
@@ -26,17 +41,22 @@ const walletOptions: CurrencyOption[] = [
   { 
     value: "metamask", 
     label: "Metamask",
-    icon: <Wallet className="text-orange-500" /> 
+    icon: <WalletMetamask variant="branded" size={68} />
   },
   { 
     value: "rainbow", 
     label: "Rainbow", 
-    icon: <div className="h-4 w-4 rounded-full bg-linear-to-r from-blue-400 to-purple-500" /> 
+    icon: <WalletRainbow variant="branded" size={68} />
   },
   { 
     value: "walletconnect", 
     label: "WalletConnect", 
-    icon: <div className="h-4 w-4 rounded-full bg-blue-500" /> 
+    icon: <WalletWalletConnect  variant="branded" size={68} /> 
+  },
+  { 
+    value: "other", 
+    label: "Other Crypto Wallets", 
+    icon: <Wallet fill="#6A7282" className="text-gray-500" />
   },
 ]
 

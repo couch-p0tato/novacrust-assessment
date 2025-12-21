@@ -29,7 +29,7 @@ export default function CurrencyInput({ label, amount, currency, options, onAmou
           onChange={(e) => onAmountChange(e.target.value)}
           className="border-none shadow-none font-bold p-0 focus-visible:ring-0 h-auto w-full placeholder:text-gray-300"
           placeholder="0.00"
-          style={{ fontSize: '24px' }}
+          style={{ fontSize: '22px' }}
           required
         />
 
@@ -39,7 +39,7 @@ export default function CurrencyInput({ label, amount, currency, options, onAmou
               variant="outline"
               role="combobox"
               aria-expanded={open}
-              className="rounded-full bg-gray-100 border-none px-2 py-4 hover:bg-gray-200 flex items-center gap-1"
+              className="rounded-full bg-gray-100 border-none px-2 py-4 text-xs hover:bg-gray-200 flex items-center gap-1.5"
             >
               <span className="font-normal text-base">{selectedCurrency?.icon}</span>
               <span className="font-normal text-sm">{selectedCurrency?.label}</span>
@@ -47,7 +47,7 @@ export default function CurrencyInput({ label, amount, currency, options, onAmou
             </Button>
           </PopoverTrigger>
           
-          <PopoverContent className="w-50 p-0" align="end">
+          <PopoverContent className="w-fit rounded-xl py-1 px-1.5" align="end">
             <Command>
               <CommandInput placeholder="Search..." />
               <CommandList>
@@ -61,15 +61,17 @@ export default function CurrencyInput({ label, amount, currency, options, onAmou
                         onCurrencyChange(currentValue)
                         setOpen(false)
                       }}
-                      className="cursor-pointer py-3"
+                      className="cursor-pointer text-xs py-2.5 space-y-2.5"
                     >
-                      <Check
+                      {/* <Check
                         className={cn(
                           "mr-2 h-4 w-4",
                           currency === option.value ? "opacity-100" : "opacity-0"
                         )}
-                      />
-                      <span className="mr-2 font-bold">{option.icon}</span>
+                      /> */}
+
+                      {/* Currency Icon */}
+                      <span>{option.icon}</span>
                       {option.label}
                     </CommandItem>
                   ))}

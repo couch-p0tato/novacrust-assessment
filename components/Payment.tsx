@@ -30,8 +30,8 @@ export default function Payment({ label, value, options, onChange, placeholder =
             className="w-full justify-between rounded-full border-gray-200 bg-white px-4 py-6 text-base font-normal hover:bg-gray-50 hover:text-black"
           >
             {selectedOption ? (
-              <div className="flex items-center gap-3">
-                <div className="flex h-6 w-6 items-center justify-center">
+              <div className="flex items-center gap-1.5">
+                <div className="flex h-8 w-8 items-center justify-center">
                    {selectedOption.icon}
                 </div>
                 <span className="font-medium text-[#013941]">{selectedOption.label}</span>
@@ -43,7 +43,7 @@ export default function Payment({ label, value, options, onChange, placeholder =
           </Button>
         </PopoverTrigger>
         
-        <PopoverContent className="p-0" align="center" style={{ width: 'var(--radix-popover-trigger-width)' }}>
+        <PopoverContent className="p-1.5 rounded-xl" align="center" style={{ width: 'var(--radix-popover-trigger-width)' }}>
           <Command>
             <CommandList>
               <CommandGroup>
@@ -55,15 +55,15 @@ export default function Payment({ label, value, options, onChange, placeholder =
                       onChange(option.value)
                       setOpen(false)
                     }}
-                    className="cursor-pointer py-3"
+                    className="cursor-pointer py-2.5"
                   >
-                    <Check
+                    {/* <Check
                       className={cn(
                         "mr-2 h-4 w-4",
                         value === option.value ? "opacity-100" : "opacity-0"
                       )}
-                    />
-                    <div className="mr-3 flex h-6 w-6 items-center justify-center">
+                    /> */}
+                    <div className="flex h-6 w-6 items-center justify-center">
                         {option.icon}
                     </div>
                     {option.label}
